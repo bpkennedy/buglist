@@ -1,6 +1,7 @@
 import { Center, Box, Flex, Stack } from '@chakra-ui/react'
 import Head from 'next/head'
 import LegendTag from '@/components/LegendTag'
+import PageTabs from '@/components/PageTabs'
 import { legend } from '@/lib/buglist'
 
 export default function Home() {
@@ -12,8 +13,8 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Flex p="4">
-        <Box w="25%">
+      <Flex p="4" className="test">
+        <Box w="auto">
           <Center>
             <Stack>
               {legend.map((legendType) => (
@@ -22,11 +23,8 @@ export default function Home() {
             </Stack>
           </Center>
         </Box>
-        <Box flex="1">
-          Stuff 2
-        </Box>
-        <Box w="25%">
-          Stuff 3
+        <Box flex="1" px={12}>
+          <PageTabs />
         </Box>
       </Flex>
     </>

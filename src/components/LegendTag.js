@@ -1,25 +1,29 @@
-import { Tag, TagLabel, Avatar } from '@chakra-ui/react'
+import { Tag, TagLabel, Grid, GridItem } from '@chakra-ui/react'
+import TypeBadge from '@/components/TypeBadge'
 
 export default function LegendTag({ legendType }) {
-  function getInitials() {
-    return legendType.badge
-  }
-
   return (
-    <Tag size='lg' colorScheme='gray' borderRadius='full'>
-      <TagLabel mr={2}>
-        {legendType.name}
-      </TagLabel>
-      <Avatar
-        name={legendType.key}
-        getInitials={getInitials}
-        size='xs'
-        bg={legendType.color}
-        mr={2}
-      />
-      <TagLabel>
-        {legendType.rarity}
-      </TagLabel>
+    <Tag size='lg ' colorScheme='gray' borderRadius='full'>
+      <Grid
+        templateColumns="repeat(5, 1fr)"
+        gap={2}
+        width="12rem"
+        p={2}
+      >
+        <GridItem colSpan={3}>
+          <TagLabel ml={2}>
+            {legendType.name}
+          </TagLabel>
+        </GridItem>
+        <GridItem colSpan={1}>
+          <TypeBadge legendType={legendType} />
+        </GridItem>
+        <GridItem colSpan={1}>
+          <TagLabel flex="1">
+            {legendType.rarity}
+          </TagLabel>
+        </GridItem>
+      </Grid>
     </Tag>
   )
 }

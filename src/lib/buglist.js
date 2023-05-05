@@ -7,82 +7,273 @@ function getWeight(index) {
   return firstWeight + (index - 1) * (lastWeight - firstWeight) / (totalNumberSpecies - 1)
 }
 
+const COMMON = 'common'
+const AVERAGE = 'average'
+const CUSTOM = 'custom'
+const RARE = 'rare'
+const SHAPE = 'shape'
+const EXOTIC = 'exotic'
+const MECH = 'mech'
+const BOSS_LEVEL = 'bossLevel'
+const PREHISTORIC = 'prehistoric'
+const WAFFLE = 'waffle'
+const ULTRA = 'ultra'
+
 export const legend = [{
-    key: 'common',
+    key: COMMON,
     badge: 'c',
     name: 'Common',
     rarity: 1,
     color: 'white',
+    textColor: 'black',
     weight: getWeight(1),
   }, {
-    key: 'average',
+    key: AVERAGE,
     badge: 'a',
     name: 'Average',
     rarity: 2,
     color: 'gray',
+    textColor: 'white',
     weight: getWeight(2),
   }, {
-    key: 'custom',
+    key: CUSTOM,
     badge: 'c·',
     name: 'Custom',
     rarity: 2,
     color: 'red',
+    textColor: 'white',
     weight: getWeight(3),
   }, {
-    key: 'rare',
+    key: RARE,
     badge: 'r',
     name: 'Rare',
     rarity: 3,
     color: 'orange',
+    textColor: 'black',
     weight: getWeight(4),
   }, {
-    key: 'shape',
+    key: SHAPE,
     badge: 's',
     name: 'Shape',
     rarity: 3,
     color: 'yellow',
+    textColor: 'black',
     weight: getWeight(5),
   }, {
-    key: 'exotic',
+    key: EXOTIC,
     badge: 'e',
     name: 'Exotic',
     rarity: 3,
     color: 'green',
+    textColor: 'white',
     weight: getWeight(6),
   }, {
-    key: 'mech',
+    key: MECH,
     badge: 'm',
     name: 'Mech',
     rarity: 3,
     color: 'teal',
+    textColor: 'white',
     weight: getWeight(7),
   }, {
-    key: 'bossLevel',
+    key: BOSS_LEVEL,
     badge: 'b',
     name: 'Boss Level',
     rarity: 4,
     color: 'blue',
+    textColor: 'white',
     weight: getWeight(8),
   }, {
-    key: 'prehistoric',
+    key: PREHISTORIC,
     badge: 'p',
     name: 'Prehistoric',
     rarity: 4,
     color: 'cyan',
+    textColor: 'black',
     weight: getWeight(9),
   }, {
-    key: 'waffle',
+    key: WAFFLE,
     badge: 'w',
     name: 'Waffle',
     rarity: 5,
     color: 'purple',
+    textColor: 'white',
     weight: getWeight(10),
   }, {
-    key: 'ultra',
+    key: ULTRA,
     badge: 'u',
     name: 'Ultra',
     rarity: 5,
     color: 'black',
+    textColor: 'white',
     weight: getWeight(11),
+  },
+]
+
+export const species = [{
+    key: 'blackWeb',
+    name: 'Black Web',
+    type: RARE,
+    pages: [1],
+  }, {
+    key: 'bleachLeach',
+    name: 'Bleach Leach',
+    type: AVERAGE,
+    pages: [1],
+  }, {
+    key: 'bugIve',
+    name: 'Bug Ive',
+    type: COMMON,
+    pages: [1],
+  }, {
+    key: 'discoWeb',
+    name: 'Disco Web',
+    type: RARE,
+    pages: [1],
+  }, {
+    key: 'flufer',
+    name: 'Flufer',
+    type: RARE,
+    pages: [1],
+  }, {
+    key: 'insectapus',
+    name: 'Insectapus',
+    type: EXOTIC,
+    pages: [1],
+  }, {
+    key: 'leaferfly',
+    name: 'Leaferfly',
+    type: AVERAGE,
+    pages: [1],
+  }, {
+    key: 'milkWeederfly',
+    name: 'Milk Weederfly',
+    type: COMMON,
+    pages: [1],
+  }, {
+    key: 'otterbug',
+    name: 'Otterbug',
+    type: AVERAGE,
+    pages: [1],
+  }, {
+    key: 'pachBen',
+    name: 'Pach Ben',
+    type: CUSTOM,
+    pages: [1],
+  }, {
+    key: 'shardBug',
+    name: 'Shard Bug',
+    type: COMMON,
+    pages: [1],
+  }, {
+    key: 'softWorm',
+    name: 'Soft Worm',
+    type: COMMON,
+    pages: [1],
+  }, {
+    key: 'spiderSkeleton',
+    name: 'Spider Skeleton',
+    type: AVERAGE,
+    pages: [1],
+  }, {
+    key: 'stoneBurner',
+    name: 'Stone Burner',
+    type: RARE,
+    pages: [1],
+  }, {
+    key: 'syrupHopper',
+    name: 'Syrup Hopper',
+    type: WAFFLE,
+    pages: [1],
+  }, {
+    key: 'waffleWeb',
+    name: 'Waffle Web',
+    type: WAFFLE,
+    pages: [1],
+  },
+  // 
+  // 
+  // 
+  //
+  {
+    key: 'boutHam',
+    name: 'Bout Ham',
+    type: COMMON,
+    pages: [2],
+  }, {
+    key: 'ciniminipoly',
+    name: 'Ciniminipoly',
+    type: EXOTIC,
+    pages: [2],
+  }, {
+    key: 'crabHopper',
+    name: 'Crab Hopper',
+    type: COMMON,
+    pages: [2],
+  }, {
+    key: 'floweb',
+    name: 'Floweb',
+    type: AVERAGE,
+    pages: [2],
+  }, {
+    key: 'flyHopper',
+    name: 'Fly Hopper',
+    type: AVERAGE,
+    pages: [2],
+  }, {
+    key: 'gnatBot',
+    name: 'Gnat Bot',
+    type: MECH,
+    pages: [2],
+  }, {
+    key: 'ponand',
+    name: 'Ponand',
+    type: AVERAGE,
+    pages: [2],
+  }, {
+    key: 'roboWeb',
+    name: 'Robo Web',
+    type: MECH,
+    pages: [2],
+  }, {
+    key: 'titanHopper',
+    name: 'Titan Hopper',
+    type: BOSS_LEVEL,
+    pages: [2],
+  }, {
+    key: 'titanRockBurner',
+    name: 'Titan Rock Burner',
+    type: BOSS_LEVEL,
+    pages: [2],
+  }, {
+    key: 'triHopper',
+    name: 'Tri Hopper',
+    type: RARE,
+    pages: [2],
+  }, {
+    key: 'webBeatle',
+    name: 'Web Beatle',
+    type: RARE,
+    pages: [2],
+  }, {
+    key: 'webHopper',
+    name: 'Web Hopper',
+    type: RARE,
+    pages: [2],
+  }, {
+    key: 'robeatle',
+    name: 'Robeatle',
+    type: MECH,
+    pages: [2],
+  }, {
+    key: 'stringGnat',
+    name: 'String Gnat',
+    type: COMMON,
+    pages: [2],
+  }, {
+    key: 'prismarineHopper',
+    name: 'Prismarine Hopper',
+    type: RARE,
+    pages: [2],
   },
 ]
