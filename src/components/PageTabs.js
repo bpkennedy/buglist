@@ -2,10 +2,14 @@ import { Tabs, Tab, TabPanels, SimpleGrid, TabList, TabPanel, Text } from '@chak
 import SpeciesTag from '@/components/SpeciesTag'
 import { species, legend } from '@/lib/buglist'
 
-export default function PageTabs() {
+export default function PageTabs({ selectedSpeciesType = 'all' }) {
+
+  function speciesByType(type) {
+    return species.filter(s => (s.type === type || type === 'all'))
+  }
 
   function pageSpecies(pageNumber) {
-    return species.filter(s => s.pages.includes(pageNumber))
+    return speciesByType(selectedSpeciesType).filter(s => s.pages.includes(pageNumber))
   }
 
   return (
@@ -21,7 +25,7 @@ export default function PageTabs() {
         <TabPanels>
           <TabPanel>
             <SimpleGrid columns={6} spacing={2}>
-              {species.map((speciesType) => (
+              {speciesByType(selectedSpeciesType).map((speciesType) => (
                 <SpeciesTag key={speciesType.key} speciesType={speciesType} />
               ))}
             </SimpleGrid>

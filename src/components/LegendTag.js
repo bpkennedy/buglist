@@ -1,9 +1,17 @@
+import { useState } from 'react'
 import { Tag, TagLabel, Grid, GridItem } from '@chakra-ui/react'
 import TypeBadge from '@/components/TypeBadge'
 
-export default function LegendTag({ legendType }) {
+export default function LegendTag({ legendType, onSelect, selected }) {
   return (
-    <Tag size='lg ' colorScheme='gray' borderRadius='full'>
+    <Tag
+      size='lg'
+      colorScheme='gray'
+      borderRadius='full'
+      cursor='pointer'
+      onClick={onSelect}
+      bg={selected ? 'blue.400' : 'gray.600'}
+    >
       <Grid
         templateColumns="repeat(5, 1fr)"
         gap={2}
