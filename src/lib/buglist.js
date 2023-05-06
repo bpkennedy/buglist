@@ -110,7 +110,12 @@ export const legend = [{
   },
 ]
 
-export const species = [{
+export const species = [
+  // 
+  // Page 1
+  // 
+  //
+  {
     key: 'blackWeb',
     name: 'Black Web',
     type: RARE,
@@ -192,7 +197,7 @@ export const species = [{
     pages: [1],
   },
   // 
-  // 
+  // Page 2
   // 
   //
   {
@@ -276,4 +281,89 @@ export const species = [{
     type: RARE,
     pages: [2],
   },
+  // 
+  // Page 3
+  // 
+  //
+  {
+    key: 'bitMite',
+    name: 'Bit Mite',
+    type: RARE,
+    pages: [3],
+  }, {
+    key: 'bubbleBug',
+    name: 'Bubble Bug',
+    type: COMMON,
+    pages: [3],
+  }, {
+    key: 'bunBug',
+    name: 'Bun Bug',
+    type: CUSTOM,
+    pages: [3],
+  }, {
+    key: 'coriBeatle',
+    name: 'Cori Beatle',
+    type: COMMON,
+    pages: [3],
+  }, {
+    key: 'chomp',
+    name: 'Chomp',
+    type: RARE,
+    pages: [3],
+  }, {
+    key: 'dogAnt',
+    name: 'Dog Ant',
+    type: COMMON,
+    pages: [3],
+  }, {
+    key: 'electricWeb',
+    name: 'Electric Web',
+    type: COMMON,
+    pages: [3],
+  }, {
+    key: 'psyBug',
+    name: 'Psy Bug',
+    type: RARE,
+    pages: [3],
+  }, {
+    key: 'spotAnt',
+    name: 'Spot Ant',
+    type: AVERAGE,
+    pages: [3],
+  }, {
+    key: 'tigerBeatle',
+    name: 'Tiger Beatle',
+    type: AVERAGE,
+    pages: [3],
+  }, {
+    key: 'tigerHopper',
+    name: 'Tiger Hopper',
+    type: RARE,
+    pages: [3],
+  }, {
+    key: 'titanWeb',
+    name: 'Titan Web',
+    type: BOSS_LEVEL,
+    pages: [3],
+  }, {
+    key: 'triBeatle',
+    name: 'Tri Beatle',
+    type: RARE,
+    pages: [3],
+  }, {
+    key: 'twistAnt',
+    name: 'Twist Ant',
+    type: COMMON,
+    pages: [3],
+  }, {
+    key: 'webDragon',
+    name: 'Web Dragon',
+    type: BOSS_LEVEL,
+    pages: [3],
+  }, {
+    key: 'windHopper',
+    name: 'Wind Hopper',
+    type: COMMON,
+    pages: [3],
+  }
 ]
