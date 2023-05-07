@@ -1,21 +1,8 @@
-import { useState } from 'react'
 import { Center, Box, Flex, Stack } from '@chakra-ui/react'
 import Head from 'next/head'
-import LegendTag from '@/components/LegendTag'
-import PageTabs from '@/components/PageTabs'
-import { legend } from '@/lib/buglist'
+import BugdexButton from '@/components/BugdexButton'
 
-export default function Home() {
-  const [selectedSpeciesType, setSelectedSpeciesType] = useState('all')
-
-  function setSelected(type) {
-    if (selectedSpeciesType === type) {
-      setSelectedSpeciesType('all')
-    } else {
-      setSelectedSpeciesType(type)
-    }
-  }
-
+export default function Player() {
   return (
     <>
       <Head>
@@ -24,23 +11,19 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Flex p="4" className="test">
+      <Flex p="4">
+        <Box w="auto">
+          
+        </Box>
+        <Box flex="1" px={12}>
+
+        </Box>
         <Box w="auto">
           <Center>
             <Stack>
-              {legend.map((legendType) => (
-                <LegendTag
-                  key={legendType.key}
-                  legendType={legendType}
-                  onSelect={() => setSelected(legendType.key)}
-                  selected={selectedSpeciesType === legendType.key}
-                ></LegendTag>
-              ))}
+              <BugdexButton />
             </Stack>
           </Center>
-        </Box>
-        <Box flex="1" px={12}>
-          <PageTabs selectedSpeciesType={selectedSpeciesType}/>
         </Box>
       </Flex>
     </>
