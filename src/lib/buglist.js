@@ -12,6 +12,7 @@ const AVERAGE = 'average'
 const CUSTOM = 'custom'
 const RARE = 'rare'
 const SHAPE = 'shape'
+const GAME = 'game'
 const EXOTIC = 'exotic'
 const MECH = 'mech'
 const BOSS_LEVEL = 'bossLevel'
@@ -59,6 +60,14 @@ export const legend = [{
     color: 'yellow',
     textColor: 'black',
     weight: getWeight(5),
+  }, {
+    key: GAME,
+    badge: 'g',
+    name: 'Game',
+    rarity: 3,
+    color: 'lime',
+    textColor: 'black',
+    weight: getWeight(6),
   }, {
     key: EXOTIC,
     badge: 'e',
@@ -365,5 +374,180 @@ export const species = [
     name: 'Wind Hopper',
     type: COMMON,
     pages: [3],
+  },
+  // 
+  // Page 4
+  // 
+  //
+  {
+    key: 'cloudMite',
+    name: 'Cloud Mite',
+    type: AVERAGE,
+    pages: [4],
+  }, {
+    key: 'fireMite',
+    name: 'Fire Mite',
+    type: COMMON,
+    pages: [4],
+  }, {
+    key: 'fireScorpion',
+    name: 'Fire Scorpion',
+    type: RARE,
+    pages: [4],
+  }, {
+    key: 'hairWeb',
+    name: 'Hair Web',
+    type: COMMON,
+    pages: [4],
+  }, {
+    key: 'mitePack',
+    name: 'Mite Pack',
+    type: RARE,
+    pages: [4],
+  }, {
+    key: 'mitePsy',
+    name: 'Mite Psy',
+    type: COMMON,
+    pages: [4],
+  }, {
+    key: 'psyScorpion',
+    name: 'Psy Scorpion',
+    type: COMMON,
+    pages: [4],
+  }, {
+    key: 'spikeWorm',
+    name: 'Spike Worm',
+    type: CUSTOM,
+    pages: [4],
+  }, {
+    key: 'suckBug',
+    name: 'Suck Bug',
+    type: AVERAGE,
+    pages: [4],
+  }, {
+    key: 'tntWeb',
+    name: 'TNT Web',
+    type: AVERAGE,
+    pages: [4],
+  }, {
+    key: 'titanMite',
+    name: 'Titan Mite',
+    type: BOSS_LEVEL,
+    pages: [4],
+  }, {
+    key: 'titanScorpion',
+    name: 'Titan Scorpion',
+    type: BOSS_LEVEL,
+    pages: [4],
+  }, {
+    key: 'titanWorm',
+    name: 'Titan Worm',
+    type: BOSS_LEVEL,
+    pages: [4],
+  }, {
+    key: 'waffleScorpion',
+    name: 'Waffle Scorpion',
+    type: WAFFLE,
+    pages: [4],
+  }, {
+    key: 'waffleWorm',
+    name: 'Waffle Worm',
+    type: WAFFLE,
+    pages: [4],
+  }, {
+    key: 'web',
+    name: 'Web',
+    type: COMMON,
+    pages: [4],
+  },
+  // 
+  // Page 5
+  // 
+  //
+  {
+    key: 'axolotleBugPart1',
+    name: 'Axolotle Bug Part 1',
+    type: BOSS_LEVEL,
+    pages: [5],
+  }, {
+    key: 'axolotleBugPart2',
+    name: 'Axolotle Bug Part 2',
+    type: ULTRA,
+    pages: [5],
+  }, {
+    key: 'bug',
+    name: 'Bug',
+    type: COMMON,
+    pages: [5],
+  }, {
+    key: 'covidBugteen',
+    name: 'Covid Bugteen',
+    type: CUSTOM,
+    pages: [5],
+  }, {
+    key: 'cubug',
+    name: 'Cubug',
+    type: SHAPE,
+    pages: [5],
+  }, {
+    key: 'downsizeMothra',
+    name: 'Downsize Mothra',
+    type: BOSS_LEVEL,
+    pages: [5],
+  }, {
+    key: 'dragoBug',
+    name: 'Drago Bug',
+    type: RARE,
+    pages: [5],
+  }, {
+    key: 'dragoSpine',
+    name: 'Drago Spine',
+    type: RARE,
+    pages: [5],
+  }, {
+    key: 'dragoTick',
+    name: 'Drago Tick',
+    type: RARE,
+    pages: [5],
+  }, {
+    key: 'fireBug',
+    name: 'Fire Bug',
+    type: COMMON,
+    pages: [5],
+  }, {
+    key: 'mario',
+    name: 'Mario',
+    type: GAME,
+    pages: [5],
+  }, {
+    key: 'multiBug',
+    name: 'Multi Bug',
+    type: RARE,
+    pages: [5],
+  }, {
+    key: 'pizzaBeatle',
+    name: 'Pizza Beatle',
+    type: CUSTOM,
+    pages: [5],
+  }, {
+    key: 'plantick',
+    name: 'Plantick',
+    type: COMMON,
+    pages: [5],
+  }, {
+    key: 'pretzelTick',
+    name: 'Pretzel Tick',
+    type: CUSTOM,
+    pages: [5],
+  }, {
+    key: 'trapmouthSpider',
+    name: 'Trapmouth Spider',
+    type: BOSS_LEVEL,
+    pages: [5],
+  }, {
+    key: 'waffen.ss.bug',
+    name: 'Waffen SS Bug',
+    type: CUSTOM,
+    pages: [5],
   }
 ]
