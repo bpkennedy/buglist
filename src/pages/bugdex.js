@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Center, Box, Flex, Stack } from '@chakra-ui/react'
+import { Center, Box, Flex, Stack, Heading } from '@chakra-ui/react'
 import Head from 'next/head'
 import LegendTag from '@/components/LegendTag'
 import PageTabs from '@/components/PageTabs'
@@ -25,10 +25,13 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Flex p="4" className="test">
+      <Flex p="4">
         <Box w="auto">
           <Center>
             <Stack>
+              <Center>
+                <Heading as='h1' size='xl' noOfLines={1}>Bugdex</Heading>
+              </Center>
               {legend.map((legendType) => (
                 <LegendTag
                   key={legendType.key}

@@ -1,6 +1,7 @@
-import { Center, Box, Flex, Stack } from '@chakra-ui/react'
+import { Center, Box, Flex, Stack, Heading } from '@chakra-ui/react'
 import Head from 'next/head'
 import BugdexButton from '@/components/BugdexButton'
+import BattleButton from '@/components/BattleButton'
 
 export default function Player() {
   return (
@@ -13,7 +14,9 @@ export default function Player() {
       </Head>
       <Flex p="4">
         <Box w="auto">
-          
+          <Center>
+            <Heading as='h1' size='xl' noOfLines={1}>Player</Heading>
+          </Center>
         </Box>
         <Box flex="1" px={12}>
 
@@ -22,6 +25,7 @@ export default function Player() {
           <Center>
             <Stack>
               <BugdexButton />
+              <BattleButton />
             </Stack>
           </Center>
         </Box>
