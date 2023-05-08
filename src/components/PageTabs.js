@@ -46,7 +46,7 @@ export default function PageTabs({ selectedSpeciesType = 'all' }) {
               legend.map((legendType, index) => {
                 return (
                   <TabPanel key={index}>
-                    <SimpleGrid columns={6} spacing={2}>
+                    <SimpleGrid columns={5} spacing={2}>
                       {pageSpecies(index + 1).map((speciesType) => (
                         <SpeciesTag key={speciesType.key} speciesType={speciesType} />
                       ))}
