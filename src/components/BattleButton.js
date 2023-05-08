@@ -1,6 +1,5 @@
 import { useRouter } from 'next/router'
-import Image from 'next/image'
-import battle from '@/assets/SwordsCrossedIcon.svg'
+import BugBattleIcon from './BugBattleIcon'
 import { Box } from '@chakra-ui/react'
 
 export default function BattleButton() {
@@ -10,7 +9,7 @@ export default function BattleButton() {
     <Box
       w={20}
       h={20}
-      p={2}
+      px={4}
       borderWidth={'2px'}
       borderRadius={'lg'}
       borderColor="blue.300"
@@ -18,10 +17,7 @@ export default function BattleButton() {
       cursor={'pointer'}
       onClick={() => router.push('/battle')}
     >
-      <Image
-        src={battle}
-        alt="Battle Icon"
-      />
+      <BugBattleIcon color="white" />
     </Box>
   )
 }

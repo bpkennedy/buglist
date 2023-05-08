@@ -1,6 +1,5 @@
 import { useRouter } from 'next/router'
-import Image from 'next/image'
-import bugdex from '@/assets/BugdexIcon.svg'
+import BugdexIcon from './BugdexIcon'
 import { Box } from '@chakra-ui/react'
 
 export default function BugdexButton() {
@@ -10,7 +9,7 @@ export default function BugdexButton() {
     <Box
       w={20}
       h={20}
-      p={2}
+      px={4}
       borderWidth={'2px'}
       borderRadius={'lg'}
       borderColor="blue.300"
@@ -18,10 +17,7 @@ export default function BugdexButton() {
       cursor={'pointer'}
       onClick={() => router.push('/bugdex')}
     >
-      <Image
-        src={bugdex}
-        alt="Bugdex Icon"
-      />
+      <BugdexIcon color="white"/>
     </Box>
   )
 }
